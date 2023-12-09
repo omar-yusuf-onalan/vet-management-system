@@ -1,0 +1,60 @@
+-- Insert statements for customers
+INSERT INTO public.customers (customer_address, customer_city, customer_mail, customer_name, customer_phone)
+VALUES
+  ('789 Elm St', 'City C', 'customer1@example.com', 'John Doe', '111-222-3333'),
+  ('101 Pine St', 'City D', 'customer2@example.com', 'Jane Smith', '444-555-6666'),
+  ('202 Cedar St', 'City E', 'customer3@example.com', 'Bob Johnson', '777-888-9999'),
+  ('303 Maple St', 'City F', 'customer4@example.com', 'Alice Brown', '111-222-3333'),
+  ('404 Birch St', 'City G', 'customer5@example.com', 'Charlie Davis', '444-555-6666');
+
+-- Insert statements for animals
+INSERT INTO public.animals (animal_breed, animal_color, animal_date_of_birth, animal_gender, animal_name, animal_species, animal_customer_id)
+VALUES
+  ('Labrador', 'Yellow', '2019-01-15', 'Male', 'Buddy', 'Dog', 1),
+  ('Persian', 'White', '2020-03-20', 'Female', 'Fluffy', 'Cat', 2),
+  ('Beagle', 'Brown', '2018-05-10', 'Male', 'Max', 'Dog', 3),
+  ('Siamese', 'Cream', '2019-07-25', 'Male', 'Whiskers', 'Cat', 4),
+  ('Golden Retriever', 'Golden', '2020-09-05', 'Female', 'Lucy', 'Dog', 5);
+
+-- Insert statements for vaccines
+INSERT INTO public.vaccines (vaccine_code, vaccine_name, vaccine_protection_finish_date, vaccine_protection_start_date, vaccine_animal_id)
+VALUES
+  ('V001', 'Rabies', '2023-01-01', '2022-01-01', 1),
+  ('V002', 'Distemper', '2023-02-01', '2022-02-01', 1),
+  ('V003', 'Feline Leukemia', '2023-03-01', '2022-03-01', 2),
+  ('V004', 'FVRCP', '2023-04-01', '2022-04-01', 2),
+  ('V005', 'Parvovirus', '2023-05-01', '2022-05-01', 3),
+  ('V006', 'Bordetella', '2023-06-01', '2022-06-01', 3),
+  ('V007', 'Feline Calicivirus', '2023-07-01', '2022-07-01', 4),
+  ('V008', 'Rhinotracheitis', '2023-08-01', '2022-08-01', 4),
+  ('V009', 'Canine Hepatitis', '2023-09-01', '2022-09-01', 5),
+  ('V010', 'Lyme Disease', '2023-10-01', '2022-10-01', 5);
+
+-- Insert statements for doctors
+INSERT INTO public.doctors (doctor_address, doctor_city, doctor_mail, doctor_name, doctor_phone)
+VALUES
+  ('123 Main St', 'City A', 'doctor1@example.com', 'Dr. Smith', '123-456-7890'),
+  ('456 Oak St', 'City B', 'doctor2@example.com', 'Dr. Johnson', '987-654-3210');
+
+-- Insert statements for available_dates
+INSERT INTO public.available_dates (available_date, available_date_doctor_id)
+VALUES
+  ('2023-01-10', 1),
+  ('2023-01-15', 1),
+  ('2023-01-20', 1),
+  ('2023-01-25', 1),
+  ('2023-01-30', 1),
+  ('2023-02-05', 2),
+  ('2023-02-10', 2),
+  ('2023-02-15', 2),
+  ('2023-02-20', 2),
+  ('2023-02-25', 2);
+
+-- Insert statements for appointments
+INSERT INTO public.appointments (appointment_date, appointment_animal_id, appointment_doctor_id)
+VALUES
+  ('2023-01-15 09:00:00', 1, 1),
+  ('2023-01-20 10:00:00', 2, 1),
+  ('2023-02-10 11:00:00', 3, 2),
+  ('2023-02-15 14:00:00', 4, 2),
+  ('2023-02-25 15:00:00', 5, 2);
